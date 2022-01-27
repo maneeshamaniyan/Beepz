@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/titleLayout"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/orderLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleLayout"
+        android:layout_marginStart="@dimen/layout_padding"
+        android:layout_marginEnd="@dimen/layout_padding"
+        android:layout_marginBottom="@dimen/layout_padding"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:padding="@dimen/item_padding">
+
+        <ImageView
+            android:id="@+id/orderImageView"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/layout_margin"
+            android:layout_marginTop="@dimen/layout_margin"
+            android:layout_marginEnd="@dimen/layout_margin"
+            android:layout_marginBottom="@dimen/layout_margin"
+            android:src="@drawable/order" />
+
+        <TextView
+            android:id="@+id/orderTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/orderImageView"
+            android:layout_marginStart="@dimen/layout_margin"
+            android:layout_toEndOf="@+id/orderImageView"
+            android:text="@string/order_number"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/orderNumberTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/orderTextView"
+            android:layout_marginStart="@dimen/layout_margin"
+            android:layout_toEndOf="@+id/orderImageView"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/orderLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/bookingConfirmedLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/bookingConfirmedImageLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/layout_padding"
+                    android:paddingTop="@dimen/layout_padding"
+                    android:paddingRight="@dimen/layout_padding">
+
+                    <ImageView
+                        android:id="@+id/bookingStatusImageView"
+                        android:layout_width="@dimen/layout_padding"
+                        android:layout_height="@dimen/layout_padding"
+                        android:src="@drawable/circle" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="@dimen/button_margin"
+                        android:layout_below="@+id/bookingStatusImageView"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/black" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toEndOf="@+id/bookingConfirmedImageLayout"
+                    android:padding="@dimen/layout_margin">
+
+                    <ImageView
+                        android:id="@+id/bookingConfirmedImageView"
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/image_size"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="@dimen/layout_margin"
+                        android:layout_marginTop="@dimen/layout_margin"
+                        android:layout_marginEnd="@dimen/layout_margin"
+                        android:layout_marginBottom="@dimen/layout_margin"
+                        android:src="@drawable/thumb" />
+
+                    <TextView
+                        android:id="@+id/bookingConfirmedTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/bookingConfirmedImageView"
+                        android:layout_marginStart="@dimen/layout_margin"
+                        android:layout_toEndOf="@+id/bookingConfirmedImageView"
+                        android:text="@string/booking_confirmed"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/bookingStatusTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bookingConfirmedTextView"
+                        android:layout_marginStart="@dimen/layout_margin"
+                        android:layout_toEndOf="@+id/bookingConfirmedImageView"
+                        android:text="@string/dummy_string"
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/driverPickUpLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bookingConfirmedLayout">
+
+
+                <RelativeLayout
+                    android:id="@+id/pickUpImageLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/layout_padding"
+                    android:paddingRight="@dimen/layout_padding">
+
+                    <ImageView
+                        android:id="@+id/driverPickUpImageView"
+                        android:layout_width="@dimen/layout_padding"
+                        android:layout_height="@dimen/layout_padding"
+                        android:src="@drawable/circle" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="@dimen/button_margin"
+                        android:layout_below="@+id/driverPickUpImageView"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/black" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toEndOf="@+id/pickUpImageLayout"
+                    android:paddingLeft="@dimen/layout_margin"
+                    android:paddingRight="@dimen/layout_margin">
+
+
+                    <ImageView
+                        android:id="@+id/pickUpImageView"
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/image_size"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="@dimen/layout_margin"
+                        android:layout_marginTop="@dimen/layout_margin"
+                        android:layout_marginEnd="@dimen/layout_margin"
+                        android:layout_marginBottom="@dimen/layout_margin"
+                        android:src="@drawable/driver" />
+
+                    <TextView
+                        android:id="@+id/pickUpTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/pickUpImageView"
+                        android:layout_marginStart="@dimen/layout_margin"
+                        android:layout_toEndOf="@+id/pickUpImageView"
+                        android:text="@string/driver_pickup"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/pickUpDetailsTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pickUpTextView"
+                        android:layout_marginStart="@dimen/layout_margin"
+                        android:layout_toEndOf="@+id/pickUpImageView"
+                        android:text="@string/dummy_string"
+                        android:textColor="@color/black" />
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/scannerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/driverPickUpLayout">
+
+                <RelativeLayout
+                    android:id="@+id/scannerImageLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/layout_padding"
+                    android:paddingRight="@dimen/layout_padding">
+
+                    <ImageView
+                        android:id="@+id/scannerImageView"
+                        android:layout_width="@dimen/layout_padding"
+                        android:layout_height="@dimen/layout_padding"
+                        android:src="@drawable/circle" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="@dimen/button_margin"
+                        android:layout_below="@+id/scannerImageView"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toEndOf="@+id/scannerImageLayout"
+                    android:paddingLeft="@dimen/layout_margin"
+                    android:paddingRight="@dimen/layout_margin">
+
+                    <ImageView
+                        android:id="@+id/codeScannerImageView"
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/image_size"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="@dimen/layout_margin"
+                        android:layout_marginTop="@dimen/layout_margin"
+                        android:layout_marginEnd="@dimen/layout_margin"
+                        android:layout_marginBottom="@dimen/layout_margin"
+                        android:src="@drawable/qrcode" />
+
+                    <TextView
+                        android:id="@+id/scannerTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/codeScannerImageView"
+                        android:layout_marginStart="@dimen/layout_margin"
+                        android:layout_toEndOf="@+id/codeScannerImageView"
+                        android:text="@string/qr_code_scanned"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/scannerDetailsTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/scannerTextView"
+                        android:layout_marginStart="@dimen/layout_margin"
+                        android:layout_toEndOf="@+id/codeScannerImageView"
+                        android:text="@string/dummy_string"
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/carPickedUpLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/scannerLayout">
+
+                <RelativeLayout
+                    android:id="@+id/carPickedUpImageLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/layout_padding"
+                    android:paddingRight="@dimen/layout_padding">
+
+                    <ImageView
+                        android:id="@+id/carPickedUpImageView"
+                        android:layout_width="@dimen/layout_padding"
+                        android:layout_height="@dimen/layout_padding"
+                        android:src="@drawable/circle" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="@dimen/button_margin"
+                        android:layout_below="@+id/carPickedUpImageView"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/black" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toEndOf="@+id/carPickedUpImageLayout"
+                    android:paddingLeft="@dimen/layout_margin"
+                    android:paddingRight="@dimen/layout_margin">
+
+
+                    <ImageView
+                        android:id="@+id/pickedUpImageView"
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/image_size"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="@dimen/layout_margin"
+                        android:layout_marginTop="@dimen/layout_margin"
+                        android:layout_marginEnd="@dimen/layout_margin"
+                        android:layout_marginBottom="@dimen/layout_margin"
+                        android:src="@drawable/car" />
+
+                    <TextView
+                        android:id="@+id/carPickedUpTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/pickedUpImageView"
+                        android:layout_marginStart="@dimen/layout_margin"
+                        android:layout_toEndOf="@+id/pickedUpImageView"
+                        android:text="@string/car_picked_up"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/carPickedUpDetailsTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/carPickedUpTextView"
+                        android:layout_marginStart="@dimen/layout_margin"
+                        android:layout_toEndOf="@+id/pickedUpImageView"
+                        android:text="@string/dummy_string"
+                        android:textColor="@color/black" />
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/reachedGarageLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/carPickedUpLayout">
+
+                <RelativeLayout
+                    android:id="@+id/reachedGarageImageLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/layout_padding"
+                    android:paddingRight="@dimen/layout_padding">
+
+                    <ImageView
+                        android:id="@+id/reachedImageView"
+                        android:layout_width="@dimen/layout_padding"
+                        android:layout_height="@dimen/layout_padding"
+                        android:src="@drawable/circle" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="@dimen/button_margin"
+                        android:layout_below="@+id/reachedImageView"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/black" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toEndOf="@+id/reachedGarageImageLayout"
+                    android:paddingLeft="@dimen/layout_margin"
+                    android:paddingRight="@dimen/layout_margin">
+
+
+                    <ImageView
+                        android:id="@+id/reachedGarageImageView"
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/image_size"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="@dimen/layout_margin"
+                        android:layout_marginTop="@dimen/layout_margin"
+                        android:layout_marginEnd="@dimen/layout_margin"
+                        android:layout_marginBottom="@dimen/layout_margin"
+                        android:src="@drawable/garage" />
+
+                    <TextView
+                        android:id="@+id/reachedGarageTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/reachedGarageImageView"
+                        android:layout_marginStart="@dimen/layout_margin"
+                        android:layout_toEndOf="@+id/reachedGarageImageView"
+                        android:text="@string/reached_garage"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/reachedGarageDetailsTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/reachedGarageTextView"
+                        android:layout_marginStart="@dimen/layout_margin"
+                        android:layout_toEndOf="@+id/reachedGarageImageView"
+                        android:text="@string/dummy_string"
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/serviceStartedLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reachedGarageLayout">
+
+                <RelativeLayout
+                    android:id="@+id/serviceStartedImageLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/layout_padding"
+                    android:paddingRight="@dimen/layout_padding">
+
+                    <ImageView
+                        android:id="@+id/serviceImageView"
+                        android:layout_width="@dimen/layout_padding"
+                        android:layout_height="@dimen/layout_padding"
+                        android:src="@drawable/circle" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="@dimen/button_margin"
+                        android:layout_below="@+id/serviceImageView"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/black" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toEndOf="@+id/serviceStartedImageLayout"
+                    android:paddingLeft="@dimen/layout_margin"
+                    android:paddingRight="@dimen/layout_margin">
+
+                    <ImageView
+                        android:id="@+id/serviceStartedImageView"
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/image_size"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="@dimen/layout_margin"
+                        android:layout_marginTop="@dimen/layout_margin"
+                        android:layout_marginEnd="@dimen/layout_margin"
+                        android:layout_marginBottom="@dimen/layout_margin"
+                        android:src="@drawable/car_service" />
+
+                    <TextView
+                        android:id="@+id/serviceStartedTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/serviceStartedImageView"
+                        android:layout_marginStart="@dimen/layout_margin"
+                        android:layout_toEndOf="@+id/serviceStartedImageView"
+                        android:text="@string/service_started"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/serviceStartedDetailsTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/serviceStartedTextView"
+                        android:layout_marginStart="@dimen/layout_margin"
+                        android:layout_toEndOf="@+id/serviceStartedImageView"
+                        android:text="@string/dummy_string"
+                        android:textColor="@color/black" />
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/serviceEndedLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/serviceStartedLayout">
+
+                <RelativeLayout
+                    android:id="@+id/serviceEndedImageLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/layout_padding"
+                    android:paddingRight="@dimen/layout_padding">
+
+                    <ImageView
+                        android:id="@+id/endedImageView"
+                        android:layout_width="@dimen/layout_padding"
+                        android:layout_height="@dimen/layout_padding"
+                        android:src="@drawable/circle" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="@dimen/button_margin"
+                        android:layout_below="@+id/endedImageView"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toEndOf="@+id/serviceEndedImageLayout"
+                    android:paddingLeft="@dimen/layout_margin"
+                    android:paddingRight="@dimen/layout_margin">
+
+
+                    <ImageView
+                        android:id="@+id/serviceEndedImageView"
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/image_size"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="@dimen/layout_margin"
+                        android:layout_marginTop="@dimen/layout_margin"
+                        android:layout_marginEnd="@dimen/layout_margin"
+                        android:layout_marginBottom="@dimen/layout_margin"
+                        android:src="@drawable/car" />
+
+                    <TextView
+                        android:id="@+id/serviceEndedTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/serviceEndedImageView"
+                        android:layout_marginStart="@dimen/layout_margin"
+                        android:layout_toEndOf="@+id/serviceEndedImageView"
+                        android:text="@string/service_ended"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/serviceEndedDetailsTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/serviceEndedTextView"
+                        android:layout_marginStart="@dimen/layout_margin"
+                        android:layout_toEndOf="@+id/serviceEndedImageView"
+                        android:text="@string/dummy_string"
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/dropOffLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/serviceEndedLayout">
+
+                <RelativeLayout
+                    android:id="@+id/dropOffImageLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/layout_padding"
+                    android:paddingRight="@dimen/layout_padding">
+
+                    <ImageView
+                        android:id="@+id/droppedImageView"
+                        android:layout_width="@dimen/layout_padding"
+                        android:layout_height="@dimen/layout_padding"
+                        android:src="@drawable/circle" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="@dimen/button_margin"
+                        android:layout_below="@+id/droppedImageView"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/black" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toEndOf="@+id/dropOffImageLayout"
+                    android:paddingLeft="@dimen/layout_margin"
+                    android:paddingRight="@dimen/layout_margin">
+
+
+                    <ImageView
+                        android:id="@+id/dropOffImageView"
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/image_size"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="@dimen/layout_margin"
+                        android:layout_marginTop="@dimen/layout_margin"
+                        android:layout_marginEnd="@dimen/layout_margin"
+                        android:layout_marginBottom="@dimen/layout_margin"
+                        android:src="@drawable/driver" />
+
+                    <TextView
+                        android:id="@+id/dropOffTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/dropOffImageView"
+                        android:layout_marginStart="@dimen/layout_margin"
+                        android:layout_toEndOf="@+id/dropOffImageView"
+                        android:text="@string/drop_off"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/dropOffDetailsTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/dropOffTextView"
+                        android:layout_marginStart="@dimen/layout_margin"
+                        android:layout_toEndOf="@+id/dropOffImageView"
+                        android:text="@string/dummy_string"
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bookingCompletedLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dropOffLayout">
+
+                <RelativeLayout
+                    android:id="@+id/bookingCompletedImageLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/layout_padding"
+                    android:paddingRight="@dimen/layout_padding">
+
+                    <ImageView
+                        android:id="@+id/completedImageView"
+                        android:layout_width="@dimen/layout_padding"
+                        android:layout_height="@dimen/layout_padding"
+                        android:src="@drawable/circle" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/layout_margin"
+                    android:layout_toEndOf="@+id/bookingCompletedImageLayout"
+                    android:paddingLeft="@dimen/layout_margin"
+                    android:paddingRight="@dimen/layout_margin">
+
+                    <ImageView
+                        android:id="@+id/bookingCompletedImageView"
+                        android:layout_width="@dimen/image_size"
+                        android:layout_height="@dimen/image_size"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="@dimen/layout_margin"
+                        android:layout_marginTop="@dimen/layout_margin"
+                        android:layout_marginEnd="@dimen/layout_margin"
+                        android:layout_marginBottom="@dimen/layout_margin"
+                        android:src="@drawable/booking_completed" />
+
+                    <TextView
+                        android:id="@+id/bookingCompletedTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/bookingCompletedImageView"
+                        android:layout_marginStart="@dimen/layout_margin"
+                        android:layout_toEndOf="@+id/bookingCompletedImageView"
+                        android:text="@string/booking_completed"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/bookingCompletedDetailsTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bookingCompletedTextView"
+                        android:layout_marginStart="@dimen/layout_margin"
+                        android:layout_toEndOf="@+id/bookingCompletedImageView"
+                        android:text="@string/dummy_string"
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

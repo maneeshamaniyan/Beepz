@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Beepz</string>
+    <string name="car_details">Car details</string>
+    <string name="date_of_services">Date of services</string>
+    <string name="driver_on_the_way">Driver On The Way To Pick-Up</string>
+    <string name="booking_confirmed">Booking Confirmed</string>
+    <string name="dummy_string">you are putting that monkey in the</string>
+    <string name="driver_pickup">Driver on te way to pickup</string>
+    <string name="qr_code_scanned">QR Code Scanned</string>
+    <string name="car_picked_up">Car Picked Up</string>
+    <string name="reached_garage">Reached Garage</string>
+    <string name="service_started">Service Started</string>
+    <string name="service_ended">Service Ended</string>
+    <string name="drop_off">Driver on the way to Drop Off</string>
+    <string name="booking_completed">Booking Completed</string>
+    <string name="order_number">Order Number</string>
+</resources>
